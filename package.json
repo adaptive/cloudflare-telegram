@@ -1,0 +1,32 @@
+{
+  "name": "vat",
+  "version": "0.1.0",
+  "description": "Cloudflare Notifications to Telegram Webhook.",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "format": "prettier --write '*/*.{js,mjs,css,json,md}' --arrow-parens avoid --trailing-comma none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adaptive/cloudflare-telegram.git"
+  },
+  "author": "Hugo Romano <hugoromano@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adaptive/cloudflare-telegram/issues"
+  },
+  "homepage": "https://github.com/adaptive/cloudflare-telegram#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "20.0.0",
+    "@rollup/plugin-node-resolve": "13.0.4",
+    "prettier": "2.4.1",
+    "rollup": "2.56.3",
+    "rollup-plugin-copy": "3.4.0",
+    "rollup-plugin-terser": "7.0.2",
+    "@cloudflare/wrangler": "1.19.3"
+  },
+  "private": true
+}

@@ -1,0 +1,20 @@
+name = "cloudflare-telegram"
+type = "javascript"
+account_id = "88c6d2bbae479d0d28c7809df51fae29"
+workers_dev = true
+route = ""
+zone_id = ""
+compatibility_date = "2022-06-06"
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "modules"
+main = "./index.mjs"
+
+[[kv_namespaces]]
+binding = "APIS"
+id = "a19569db8bc84478a42ec59c3f965c54"
+
+# [durable_objects]
+# bindings = [{name = "COUNTER", class_name = "Counter"}]
