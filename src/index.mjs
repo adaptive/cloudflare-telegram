@@ -28,7 +28,7 @@ const handleRequest = async (request, env, ctx) => {
   const elements = address.pathname.split("/").filter(n => n);
   let response;
   if (elements[0] === undefined) {
-    response = new Response("welcome", {
+    response = new Response("GET not Allowed. Requires a POST. Demo screenshots https://github.com/adaptive/cloudflare-telegram/tree/main/demo", {
       status: 200,
       headers: {
         "Content-Type": "text/plain",
