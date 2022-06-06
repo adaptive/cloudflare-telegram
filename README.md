@@ -1,13 +1,20 @@
-# VAT VIES API
+# Notification Worker for Telegram
 
-Simple API to validate VAT numbers. Cloudflare Workers and Cloudflare KV to offload the official European Union API. This solution guarantees that within 24 hours, only one request per unique VAT number to EU servers. SOAP conversion to JSON. VAT numbers are format validated before calling VIES API to check deductibility status.
-[Demo Pages](https://vat.pages.dev/) [Demo API](https://vat.adaptive.workers.dev/)
-
+Webhook to integrate with Telegram Bot API, connecting Cloudflare and send notifications to Telegram.
 
 ## 🛠️ Usage
 
-```http
-GET /:country/:number
+
+Webhook
+
+https://cloudflare-telegram.adaptive.workers.dev/telegram/:user
+
+API Test Key
+
+46b05bb8-8a5e-4f09-9ed3-5f58ff3bc972
+
+
+
 ```
 
 ## 🥰 [Cloudflare Developer Spring Challenge](https://challenge.developers.cloudflare.com/)
