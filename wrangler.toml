@@ -16,5 +16,5 @@ main = "./index.mjs"
 binding = "APIS"
 id = "a19569db8bc84478a42ec59c3f965c54"
 
-# [durable_objects]
-# bindings = [{name = "COUNTER", class_name = "Counter"}]
+[durable_objects]
+bindings = [{name = "COUNTER", class_name = "Counter"}]
