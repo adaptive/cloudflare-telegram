@@ -1,3 +1,6 @@
+//Counter as rate limiter
+export { Counter } from "./counter.mjs";
+
 export default {
   async fetch(request, env, ctx) {
     try {
@@ -17,15 +20,11 @@ export default {
   }
 };
 
-//Counter as rate limiter
-export { Counter } from "./counter.mjs";
-
 const version = "0.1.0";
 
 let CachedAPIS = false;
 
 const handleRequest = async (request, env, ctx) => {
-
   // moves API keys to global variable, stopping calls to KV after isolate first call
   if (!CachedAPIS) {
     CachedAPIS = APIS.get("keys")
@@ -75,7 +74,7 @@ const handleRequest = async (request, env, ctx) => {
       let obj = env.COUNTER.get(id);
       let resp = await obj.fetch(request.url);
       let count = parseInt(await resp.text());
-    
+
       if (count < 1) {
         return new Response(`Too Many Request`, {
           status: 429

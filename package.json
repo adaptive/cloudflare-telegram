@@ -1,5 +1,5 @@
 {
-  "name": "vat",
+  "name": "cloudflare-telegram",
   "version": "0.1.0",
   "description": "Cloudflare Notifications to Telegram Webhook.",
   "main": "src/index.js",

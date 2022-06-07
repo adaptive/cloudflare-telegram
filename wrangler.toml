@@ -6,10 +6,12 @@ route = ""
 zone_id = ""
 compatibility_date = "2022-06-06"
 
-[build]
-command = "npm install && npm run build"
+#[build]
+#command = "npm install"
+
 [build.upload]
 format = "modules"
+dir = "./src"
 main = "./index.mjs"
 
 [[kv_namespaces]]
@@ -18,3 +20,7 @@ id = "a19569db8bc84478a42ec59c3f965c54"
 
 [durable_objects]
 bindings = [{name = "COUNTER", class_name = "Counter"}]
+
+[[migrations]]
+tag = "v1" # Should be unique for each entry
+new_classes = ["Counter"]
